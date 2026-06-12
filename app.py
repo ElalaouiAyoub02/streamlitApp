@@ -157,7 +157,7 @@ TOTAL = int(df["count"].sum())
 # ════════════════════════════════════════════════════════════
 with st.sidebar:
     st.markdown("## 🤖 Classification IT")
-    st.markdown("**Projet Job Matching · 2025**")
+    st.markdown("**Projet Job Matching · 2026**")
     st.divider()
 
     st.markdown("### 🔧 Filtres")
@@ -203,7 +203,7 @@ st.markdown("""
             border:1px solid #334155;border-radius:16px;padding:28px 32px;margin-bottom:24px;'>
     <div style='font-size:0.72rem;color:#818cf8;text-transform:uppercase;
                 letter-spacing:.1em;margin-bottom:8px;'>
-        📋 RAPPORT TECHNIQUE · JOB MATCHING IT · 2025
+        📋 RAPPORT TECHNIQUE · JOB MATCHING IT · 2026
     </div>
     <h1 style='font-size:2rem;font-weight:900;color:#f1f5f9;margin:0 0 8px;'>
         Classification Automatique des Offres IT
@@ -220,7 +220,7 @@ k1.metric("📦 Offres analysées",     "66 205", help="Dataset brut")
 k2.metric("✅ Offres IT classifiées","50 121", "75,71 %")
 k3.metric("🗂️ Catégories IT",        "40",     help="Métiers identifiés")
 k4.metric("🔍 Couverture SQL",        "~80 %",  help="Classifiées par regex BigQuery")
-k5.metric("💰 Coût Gemini",           "0,07 $", help="14 287 offres Gemini 2.0 Flash")
+k5.metric("💰 Coût Gemini",           "0,07 $", help="14 287 offres Gemini 2.5 Flash")
 st.divider()
 
 
@@ -649,7 +649,7 @@ with tab3:
          "    WHEN REGEXP_CONTAINS(LOWER(matching_text),\n"
          "         r'\\bsap\\b|abap|s/4hana') THEN 'Consultant SAP'\n"
          "    ...\n    ELSE 'Divers IT'\n  END AS job_type\nFROM jobs_raw;"),
-        ("4","🤖 Gemini 2.0 Flash","#a855f7",
+        ("4","🤖 Gemini 2.5 Flash","#a855f7",
          "Les **14 287** offres 'Divers IT' envoyées à Gemini. "
          "Prompt numérique (1-42) → réponse = 1 chiffre. Temperature=0. Coût : **~0,07 $**.",
          "python",
