@@ -54,7 +54,7 @@ button[kind="header"]              { display: none !important; }
 #  THEME STATE
 # ════════════════════════════════════════════════════════════
 if "dark_mode" not in st.session_state:
-    st.session_state.dark_mode = True
+    st.session_state.dark_mode = False
 
 def T(dark_val, light_val):
     return dark_val if st.session_state.dark_mode else light_val
@@ -325,7 +325,7 @@ with st.sidebar:
 
     # ── TOGGLE THÈME ────────────────────────────────────────
     # Un seul bouton, pleine largeur, contrôle toute la page
-    icon  = "☀️ Mode Clair"  if st.session_state.dark_mode else "🌙 Mode Sombre"
+    icon = "☀️ Mode Clair" if st.session_state.dark_mode else "🌙 Mode Sombre"
     label = icon
     if st.button(label, key="theme_toggle", use_container_width=True):
         st.session_state.dark_mode = not st.session_state.dark_mode
