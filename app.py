@@ -724,7 +724,7 @@ with tab2:
 
     if wc_choice == "Catégories IT (par volume)":
         st.info("💡 La **taille** est proportionnelle au nombre d'offres. La **couleur** correspond à la famille.")
-        st.image(wc_categories(dark_flag), use_column_width=True)
+        st.image(wc_categories(dark_flag), use_container_width=True)
         leg = st.columns(5)
         for i,(fam,color) in enumerate(FAM_COLORS.items()):
             with leg[i]:
